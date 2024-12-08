@@ -14,7 +14,7 @@ const MenuBar = () => {
   }, [path]);
 
   const title = (
-    <h1 className="font-heading color-black text-4xl font-medium">Energy</h1>
+    <h1 className="font-heading text-black text-4xl font-medium">Energy</h1>
   );
 
   const navItems = [
@@ -33,7 +33,7 @@ const MenuBar = () => {
   ];
 
   const nav = (
-    <div className="flex gap-2">
+    <div className="flex space-x-2">
       {navItems.map((navItem) => {
         const { label, nav } = navItem;
         return (
