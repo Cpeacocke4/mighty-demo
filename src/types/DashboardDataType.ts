@@ -1,3 +1,4 @@
+import { ChartType } from "./ChartType";
 import { SensorType } from "./SensorType";
 
 export type DashboardDataType = {
@@ -7,15 +8,6 @@ export type DashboardDataType = {
     value: number;
     unit?: string;
   }[];
-  chart: {
-    labels: string[];
-    datasets: {
-      label: string;
-      data: number[];
-      fill: boolean;
-      borderColor: string;
-      tension: number;
-    }[];
-  };
+  chart: ChartType;
   indoorSensors: SensorType[];
 };
