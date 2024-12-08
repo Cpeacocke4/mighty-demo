@@ -19,7 +19,7 @@ const Table = <T extends Record<string, unknown>>(props: TableProps<T>) => {
         <tr>
           {columns.map((col, index) => (
             <th key={index} className="p-5">
-              <p className="font-heading text-grey font-normal text-left">
+              <p className="font-heading text-sm text-grey font-normal text-left">
                 {col.title && col.title}
                 {!col.title && ""}
               </p>
