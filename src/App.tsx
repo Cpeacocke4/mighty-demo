@@ -1,12 +1,12 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import Dashboard from "./screens/Dashboard";
+import Router from "./Router";
 
 const queryClient = new QueryClient();
 
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <Dashboard />
+      <Router />
     </QueryClientProvider>
   );
 };
