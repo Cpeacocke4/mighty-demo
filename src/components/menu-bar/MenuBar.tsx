@@ -34,9 +34,12 @@ const MenuBar = () => {
 
   const nav = (
     <div className="flex gap-2">
-      {navItems.map((navItem) => (
-        <NavItem label={navItem.label} nav={navItem.nav} active={activeNav} />
-      ))}
+      {navItems.map((navItem) => {
+        const { label, nav } = navItem;
+        return (
+          <NavItem key={label} label={label} nav={nav} active={activeNav} />
+        );
+      })}
     </div>
   );
   return (
