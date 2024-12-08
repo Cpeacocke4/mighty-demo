@@ -1,22 +1,22 @@
 type NavItemProps = {
   label: string;
   nav: string;
-  active?: boolean;
+  active: string;
 };
 
 const NavItem = (props: NavItemProps) => {
   const { label, nav, active } = props;
+
+  const itemActive = active === nav;
+
+  const bgColor = itemActive ? "bg-green" : "";
   return (
-    <div className="bg-green rounded-xl px-5">
-      <a href={nav} aria-current={active}>
+    <div className={`${bgColor} rounded-xl px-5`}>
+      <a href={nav} aria-current={itemActive ? "page" : false}>
         {label}
       </a>
     </div>
   );
-};
-
-NavItem.defaultProps = {
-  active: false,
 };
 
 export default NavItem;
