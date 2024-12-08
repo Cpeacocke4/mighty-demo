@@ -1,6 +1,18 @@
+import { useLocation } from "react-router";
 import NavItem from "./NavItem";
+import { useEffect, useState } from "react";
 
 const MenuBar = () => {
+  const { pathname: path } = useLocation();
+
+  const [activeNav, setActiveNav] = useState("/dashboard");
+
+  useEffect(() => {
+    if (path !== "/") {
+      setActiveNav(path);
+    }
+  }, [path]);
+
   const title = (
     <h1 className="font-heading color-black text-4xl font-medium">Energy</h1>
   );
@@ -23,7 +35,7 @@ const MenuBar = () => {
   const nav = (
     <div className="flex gap-2">
       {navItems.map((navItem) => (
-        <NavItem label={navItem.label} nav={navItem.nav} />
+        <NavItem label={navItem.label} nav={navItem.nav} active={activeNav} />
       ))}
     </div>
   );
