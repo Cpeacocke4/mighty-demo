@@ -1,3 +1,5 @@
+import { SensorType } from "./SensorType";
+
 export type DashboardDataType = {
   name: string;
   keyValues: {
@@ -15,12 +17,5 @@ export type DashboardDataType = {
       tension: number;
     }[];
   };
-  indoorSensors: {
-    id: number;
-    status: string;
-    address: string;
-    placement: string;
-    humidity: string;
-    tempurature: string;
-  };
+  indoorSensors: SensorType[];
 };
