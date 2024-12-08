@@ -1,10 +1,11 @@
-import Text from "../common/Text";
 import { SensorType } from "../../types/SensorType";
 import { DataTableColumnType } from "./Table";
 
 type Column = DataTableColumnType<SensorType>;
 
-const columnText = (text: string | number) => <Text text={text} />;
+const columnText = (text: string | number) => (
+  <p className="text-nowrap font-body text-black">{text}</p>
+);
 
 export const sensorId: Column = {
   title: "ID",
@@ -18,15 +19,17 @@ export const address: Column = {
 
 export const placement: Column = {
   title: "Placement",
-  render: (sensor) => columnText(sensor.placement),
+  render: (sensor) => (
+    <p className="truncate font-body text-black">{sensor.placement}</p>
+  ),
 };
 
 export const sensorStatus: Column = {
   title: "Status",
   render: (sensor) => (
-    <div className="bg-green px-5 rounded-xl">
-      <p className="font-heading font-medium text-black">{sensor.status}</p>
-    </div>
+    <p className="font-heading font-medium text-black bg-green px-5 w-min rounded-xl">
+      {sensor.status}
+    </p>
   ),
 };
 
