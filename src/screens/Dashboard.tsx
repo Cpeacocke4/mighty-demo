@@ -1,12 +1,14 @@
+import ErrorMsg from "../components/ErrorMsg";
+import Loading from "../components/loading-state/Loading";
 import Widget from "../components/Widget";
 import useDashboardGetAllData from "../utils/useDashboardGetAllData";
 
 const Dashboard = () => {
   const { data, error, isLoading } = useDashboardGetAllData();
 
-  if (error) return <p>Oh no! There was an error fetching the data</p>;
+  if (error) return <ErrorMsg />;
 
-  if (isLoading || !data) return <p>Loading...</p>;
+  if (isLoading || !data) return <Loading />;
 
   const keyValuesData = data.keyValues;
   const keyValues = (
