@@ -4,7 +4,7 @@ import { DataTableColumnType } from "./Table";
 type Column = DataTableColumnType<SensorType>;
 
 const columnText = (text: string | number) => (
-  <p className="text-nowrap font-body text-black">{text}</p>
+  <p className="line-clamp-1 font-body text-sm text-black">{text}</p>
 );
 
 export const sensorId: Column = {
@@ -19,9 +19,7 @@ export const address: Column = {
 
 export const placement: Column = {
   title: "Placement",
-  render: (sensor) => (
-    <p className="truncate font-body text-black">{sensor.placement}</p>
-  ),
+  render: (sensor) => columnText(sensor.placement),
 };
 
 export const sensorStatus: Column = {
