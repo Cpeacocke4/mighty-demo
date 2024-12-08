@@ -1,11 +1,10 @@
+import Text from "../common/Text";
 import { SensorType } from "../../types/SensorType";
 import { DataTableColumnType } from "./Table";
 
 type Column = DataTableColumnType<SensorType>;
 
-const columnText = (text: string | number) => (
-  <p className="font-body">{text}</p>
-);
+const columnText = (text: string | number) => <Text text={text} />;
 
 export const sensorId: Column = {
   title: "ID",
