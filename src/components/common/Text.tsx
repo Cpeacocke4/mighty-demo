@@ -1,5 +1,5 @@
 type TextProps = {
-  text: string;
+  text: string | number;
 };
 
 const Text = (props: TextProps) => {
