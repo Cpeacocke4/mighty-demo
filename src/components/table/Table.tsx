@@ -16,7 +16,7 @@ const Table = <T extends Record<string, unknown>>(props: TableProps<T>) => {
   return (
     <table className="table-auto bg-container rounded-md shadow-md bd-grey divide-y divide-bg mt-2">
       <thead>
-        <tr className="">
+        <tr>
           {columns.map((col, index) => (
             <th key={index} className="p-5">
               <p className="font-heading text-grey font-normal text-left">
