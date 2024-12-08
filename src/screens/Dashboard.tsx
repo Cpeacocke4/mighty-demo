@@ -13,6 +13,7 @@ import {
 import Table from "../components/table/Table";
 import Widget from "../components/Widget";
 import useDashboardGetAllData from "../utils/useDashboardGetAllData";
+import LineGraph from "../components/graph/LineGraph";
 
 const Dashboard = () => {
   const { data, error, isLoading } = useDashboardGetAllData();
@@ -32,7 +33,7 @@ const Dashboard = () => {
   );
 
   const sensorsTable = (
-    <div className="flex-column">
+    <div>
       <Title title="Sensors" />
       <Text text="Track all of your installed sensors" />
       <Table
@@ -49,10 +50,21 @@ const Dashboard = () => {
     </div>
   );
 
+  const temperatureChart = (
+    <div className="h-max w-full">
+      <Title title="Tempureture" />
+      <Text text="Average indoor and outdoor temperature over the last 7 months" />
+      <LineGraph data={data.chart} />
+    </div>
+  );
+
   return (
-    <div className="min-h-screen flex-column p-10 space-y-4">
+    <div className="min-h-screen w-full flex-column p-10 space-y-4">
       {keyValues}
-      {sensorsTable}
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full gap-4">
+        {sensorsTable}
+        {temperatureChart}
+      </div>
     </div>
   );
 };
