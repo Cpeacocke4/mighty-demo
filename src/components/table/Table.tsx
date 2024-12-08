@@ -14,7 +14,7 @@ type TableProps<T> = {
 const Table = <T extends Record<string, unknown>>(props: TableProps<T>) => {
   const { columns, data } = props;
   return (
-    <table className="table-auto bg-container rounded-md shadow-md bd-grey divide-y divide-bg">
+    <table className="table-auto bg-container rounded-md shadow-md bd-grey divide-y divide-bg mt-2">
       <thead>
         <tr className="">
           {columns.map((col, index) => (
