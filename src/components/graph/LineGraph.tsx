@@ -30,10 +30,12 @@ const LineGraph = (props: LineGraphProps) => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
+    aspectRatio: 2,
   };
 
   return (
-    <div className="flex grow bg-container p-5 rounded-md shadow-md mt-2">
+    <div className="relative flex grow bg-container p-5 rounded-md shadow-md mt-2">
       <Line data={data} style={{ width: "100%" }} options={options} />
     </div>
   );
