@@ -1,4 +1,5 @@
 import { SensorType } from "../../types/SensorType";
+import StatusBadge from "../StatusBadge";
 import { DataTableColumnType } from "./Table";
 
 type Column = DataTableColumnType<SensorType>;
@@ -24,11 +25,7 @@ export const placement: Column = {
 
 export const sensorStatus: Column = {
   title: "Status",
-  render: (sensor) => (
-    <p className="font-heading font-medium text-black bg-green px-5 w-min rounded-xl">
-      {sensor.status}
-    </p>
-  ),
+  render: (sensor) => <StatusBadge status={sensor.status} />,
 };
 
 export const temperature: Column = {
