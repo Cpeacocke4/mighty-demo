@@ -28,7 +28,15 @@ type LineGraphProps = {
 const LineGraph = (props: LineGraphProps) => {
   const { data } = props;
 
-  return <Line data={data} />;
+  const options = {
+    responsive: true,
+  };
+
+  return (
+    <div className="flex grow bg-container p-5 rounded-md shadow-md mt-2">
+      <Line data={data} style={{ width: "100%" }} options={options} />
+    </div>
+  );
 };
 
 export default LineGraph;
