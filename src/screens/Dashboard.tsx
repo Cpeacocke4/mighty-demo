@@ -1,5 +1,14 @@
 import ErrorMsg from "../components/ErrorMsg";
 import Loading from "../components/loading-state/Loading";
+import {
+  address,
+  humidity,
+  placement,
+  sensorId,
+  sensorStatus,
+  temperature,
+} from "../components/table/SensorColumns";
+import Table from "../components/table/Table";
 import Widget from "../components/Widget";
 import useDashboardGetAllData from "../utils/useDashboardGetAllData";
 
@@ -20,7 +29,32 @@ const Dashboard = () => {
     </div>
   );
 
-  return <div className="min-h-screen flex flex-wrap p-10">{keyValues}</div>;
+  const sensorsTable = (
+    <div className="flex-column">
+      <h2 className="font-heading text-4xl text-purple">Sensors</h2>
+      <p className="font-body text-black">
+        Track all of your installed sensors
+      </p>
+      <Table
+        data={data.indoorSensors}
+        columns={[
+          sensorId,
+          address,
+          placement,
+          sensorStatus,
+          temperature,
+          humidity,
+        ]}
+      />
+    </div>
+  );
+
+  return (
+    <div className="min-h-screen flex-column p-10 space-y-4">
+      {keyValues}
+      {sensorsTable}
+    </div>
+  );
 };
 
 export default Dashboard;
