@@ -13,7 +13,9 @@ const TableRow = <T extends Record<string, unknown>>(
   return (
     <tr>
       {columns.map((col, index) => (
-        <td key={index}>{col.render && col.render(item)}</td>
+        <td key={index} className="p-5">
+          {col.render && col.render(item)}
+        </td>
       ))}
     </tr>
   );

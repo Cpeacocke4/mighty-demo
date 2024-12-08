@@ -14,12 +14,12 @@ type TableProps<T> = {
 const Table = <T extends Record<string, unknown>>(props: TableProps<T>) => {
   const { columns, data } = props;
   return (
-    <table className="table-auto">
+    <table className="table-auto bg-container rounded-md shadow-md bd-grey divide-y divide-bg">
       <thead>
-        <tr>
+        <tr className="">
           {columns.map((col, index) => (
-            <th key={index}>
-              <p>
+            <th key={index} className="p-5">
+              <p className="font-heading text-grey font-normal text-left">
                 {col.title && col.title}
                 {!col.title && ""}
               </p>
@@ -28,7 +28,7 @@ const Table = <T extends Record<string, unknown>>(props: TableProps<T>) => {
         </tr>
       </thead>
 
-      <tbody>
+      <tbody className="divide-y divide-bg">
         {data?.map((i, index) => (
           <TableRow columns={columns} item={i} key={index} />
         ))}
