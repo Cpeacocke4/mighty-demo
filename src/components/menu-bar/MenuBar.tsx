@@ -26,10 +26,6 @@ const MenuBar = () => {
       label: "Sensors",
       nav: "/sensors",
     },
-    {
-      label: "Locations",
-      nav: "/locations",
-    },
   ];
 
   const nav = (
