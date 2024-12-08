@@ -1,11 +1,12 @@
 import { SensorType } from "../../types/SensorType";
 import StatusBadge from "../StatusBadge";
+import Tooltip from "../Tooltip";
 import { DataTableColumnType } from "./Table";
 
 type Column = DataTableColumnType<SensorType>;
 
 const columnText = (text: string | number) => (
-  <p className="line-clamp-1 font-body text-sm text-black">{text}</p>
+  <p className="line-clamp-1 font-body text-sm text-black text-left">{text}</p>
 );
 
 export const sensorId: Column = {
@@ -15,12 +16,16 @@ export const sensorId: Column = {
 
 export const address: Column = {
   title: "Address",
-  render: (sensor) => columnText(sensor.address),
+  render: (sensor) => (
+    <Tooltip text={sensor.address}>{columnText(sensor.address)}</Tooltip>
+  ),
 };
 
 export const placement: Column = {
   title: "Placement",
-  render: (sensor) => columnText(sensor.placement),
+  render: (sensor) => (
+    <Tooltip text={sensor.placement}>{columnText(sensor.placement)}</Tooltip>
+  ),
 };
 
 export const sensorStatus: Column = {
