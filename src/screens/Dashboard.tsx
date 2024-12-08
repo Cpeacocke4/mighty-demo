@@ -1,3 +1,5 @@
+import Title from "../components/common/Title";
+import Text from "../components/common/Text";
 import ErrorMsg from "../components/ErrorMsg";
 import Loading from "../components/loading-state/Loading";
 import {
@@ -31,10 +33,8 @@ const Dashboard = () => {
 
   const sensorsTable = (
     <div className="flex-column">
-      <h2 className="font-heading text-4xl text-purple">Sensors</h2>
-      <p className="font-body text-black">
-        Track all of your installed sensors
-      </p>
+      <Title title="Sensors" />
+      <Text text="Track all of your installed sensors" />
       <Table
         data={data.indoorSensors}
         columns={[
