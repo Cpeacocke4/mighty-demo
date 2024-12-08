@@ -5,7 +5,7 @@ type WidgetProps = {
 };
 
 const Widget = (props: WidgetProps) => {
-  const { title, value, unit } = props;
+  const { title, value, unit = "" } = props;
 
   return (
     <div className="flex grow bg-container px-10 py-6 h-full rounded-md shadow-md">
@@ -15,10 +15,6 @@ const Widget = (props: WidgetProps) => {
       </div>
     </div>
   );
-};
-
-Widget.defaultProps = {
-  unit: "",
 };
 
 export default Widget;
