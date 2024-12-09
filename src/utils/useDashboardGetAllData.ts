@@ -4,16 +4,12 @@ import dashboardGetAllData from "./dashboard-get-all-data";
 const DASHBOARD_DATA = "DASHBAORD_DATA";
 
 const useDashboardGetAllData = () => {
-  const { data, error, isLoading } = useQuery({
+  const query = useQuery({
     queryKey: [DASHBOARD_DATA],
     queryFn: dashboardGetAllData,
   });
 
-  return {
-    data,
-    error,
-    isLoading,
-  };
+  return query;
 };
 
 export default useDashboardGetAllData;
