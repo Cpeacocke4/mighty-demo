@@ -14,7 +14,7 @@ const TableRow = <T extends Record<string, unknown>>(
     <tr>
       {columns.map((col, index) => (
         <td key={index} className="p-5">
-          {col.render && col.render(item)}
+          {col.render(item)}
         </td>
       ))}
     </tr>
