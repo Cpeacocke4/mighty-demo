@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 type NavItemProps = {
   label: string;
   nav: string;
@@ -14,13 +16,12 @@ const NavItem = (props: NavItemProps) => {
   const hoverState = itemActive ? "" : "hover:text-purple hover:font-bold";
   return (
     <div className={`${bgColor} rounded-xl px-5`}>
-      <a
-        href={nav}
-        aria-current={itemActive ? "page" : false}
+      <Link
+        to={nav}
         className={`font-body font-medium text-black ${hoverState}`}
       >
         {label}
-      </a>
+      </Link>
     </div>
   );
 };
