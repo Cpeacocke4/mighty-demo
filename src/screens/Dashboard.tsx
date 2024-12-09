@@ -24,7 +24,7 @@ const Dashboard = () => {
 
   const keyValuesData = data.keyValues;
   const keyValues = (
-    <div className="flex flex-row h-full w-full space-x-4">
+    <div className="flex flex-row flex-wrap h-full w-full gap-4">
       {keyValuesData.map((keyValue) => {
         const { name, value, unit } = keyValue;
         return <Widget key={name} title={name} value={value} unit={unit} />;
@@ -33,7 +33,7 @@ const Dashboard = () => {
   );
 
   const sensorsTable = (
-    <div>
+    <div className="w-full">
       <Title title="Sensors" />
       <Text text="Track all of your installed sensors" />
       <Table
@@ -61,7 +61,7 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen w-full flex-column p-10 space-y-4">
       {keyValues}
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full gap-4">
+      <div className="grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full gap-4">
         {sensorsTable}
         {temperatureChart}
       </div>
