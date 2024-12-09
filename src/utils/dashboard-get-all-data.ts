@@ -1,4 +1,4 @@
-import { DashboardDataType } from "../types/DashboardDataType";
+import { DashboardDataType } from "../types";
 import get from "./get";
 
 const dashboardGetAllData = (): Promise<DashboardDataType> =>

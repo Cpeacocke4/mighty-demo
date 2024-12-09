@@ -1,4 +1,4 @@
-import { SensorType } from "../../types/SensorType";
+import { SensorType } from "../../types";
 import StatusBadge from "../StatusBadge";
 import Tooltip from "../Tooltip";
 import { DataTableColumnType } from "./Table";
