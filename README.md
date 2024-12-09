@@ -98,6 +98,7 @@ I would have liked to add a few things to the project and saw areas for improvem
 - Add darkmode.
 - Integrate component library for toasts, tooltips, modals etc.
 - Work with breakpoints better to create smoother transitions.
+- Add custom styling to Chart.js Line graph
 
    
 
