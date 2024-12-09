@@ -52,7 +52,7 @@ Follow these instructions to set up and run the project locally.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/frontend-demo-project.git
+   git clone https://github.com/Cpeacocke4/mighty-demo.git
    cd mighty-demo
    ```
 2. Install dependencies:
