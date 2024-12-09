@@ -17,14 +17,32 @@ export const sensorId: Column = {
 export const address: Column = {
   title: "Address",
   render: (sensor) => (
-    <Tooltip text={sensor.address}>{columnText(sensor.address)}</Tooltip>
+    <>
+      <div className="sm:hidden md:block lg:hidden xl:hidden">
+        <Tooltip text={sensor.placement}>
+          {columnText(sensor.placement)}
+        </Tooltip>
+      </div>
+      <div className="sm:block md:hidden lg:block xl:block">
+        {columnText(sensor.placement)}
+      </div>
+    </>
   ),
 };
 
 export const placement: Column = {
   title: "Placement",
   render: (sensor) => (
-    <Tooltip text={sensor.placement}>{columnText(sensor.placement)}</Tooltip>
+    <>
+      <div className="sm:hidden md:block lg:hidden xl:hidden">
+        <Tooltip text={sensor.placement}>
+          {columnText(sensor.placement)}
+        </Tooltip>
+      </div>
+      <div className="sm:block md:hidden lg:block xl:block">
+        {columnText(sensor.placement)}
+      </div>
+    </>
   ),
 };
 
