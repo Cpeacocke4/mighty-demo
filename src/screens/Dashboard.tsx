@@ -52,7 +52,7 @@ const Dashboard = () => {
 
   const temperatureChart = (
     <div className="h-max w-full">
-      <Title title="Tempureture" />
+      <Title title="Temperature" />
       <Text text="Average indoor and outdoor temperature over the last 7 months" />
       <LineGraph data={data.chart} />
     </div>
