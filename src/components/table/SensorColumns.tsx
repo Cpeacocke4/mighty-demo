@@ -18,13 +18,11 @@ export const address: Column = {
   title: "Address",
   render: (sensor) => (
     <>
-      <div className="sm:hidden md:block lg:hidden xl:hidden">
-        <Tooltip text={sensor.placement}>
-          {columnText(sensor.placement)}
-        </Tooltip>
+      <div className="xs:block sm:hidden md:block lg:hidden xl:hidden">
+        <Tooltip text={sensor.address}>{columnText(sensor.address)}</Tooltip>
       </div>
-      <div className="sm:block md:hidden lg:block xl:block">
-        {columnText(sensor.placement)}
+      <div className="xs:hidden sm:block md:hidden lg:block xl:block">
+        {columnText(sensor.address)}
       </div>
     </>
   ),
@@ -34,12 +32,12 @@ export const placement: Column = {
   title: "Placement",
   render: (sensor) => (
     <>
-      <div className="sm:hidden md:block lg:hidden xl:hidden">
+      <div className="xs:block sm:hidden md:block lg:hidden xl:hidden">
         <Tooltip text={sensor.placement}>
           {columnText(sensor.placement)}
         </Tooltip>
       </div>
-      <div className="sm:block md:hidden lg:block xl:block">
+      <div className="xs:hidden sm:block md:hidden lg:block xl:block">
         {columnText(sensor.placement)}
       </div>
     </>
