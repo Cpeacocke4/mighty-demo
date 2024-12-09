@@ -28,12 +28,12 @@ The time spent working on this project was tracked via [Clockify](https://app.cl
 
 ## Technologies Used
 
-- **Framework/Library**: React.js,
+- **Framework/Library**: React.js
 - **Language**: JavaScript/TypeScript
 - **Styling**: Tailwind
 - **Build Tools**: Vite
 - **API Integration**: Tanstack
-- **Other Tools**: [Axios, chart.js react-hot-toast, react-router]
+- **Other Tools**: [Axios, chart.js, react-hot-toast, react-router]
 - **Loading Animation**: [SVG Backgrounds](https://www.svgbackgrounds.com/elements/animated-svg-preloaders/)
 
 ---
