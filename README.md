@@ -53,7 +53,7 @@ Follow these instructions to set up and run the project locally.
 
    ```bash
    git clone https://github.com/yourusername/frontend-demo-project.git
-   cd frontend-demo-project
+   cd mighty-demo
    ```
 2. Install dependencies:
    ```
@@ -62,7 +62,7 @@ Follow these instructions to set up and run the project locally.
    ```
 3. Run project:
    ```
-   npm start
+   npm run dev
    
    ```
 
