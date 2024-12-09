@@ -8,7 +8,6 @@ const Router = () => (
     <Routes>
       <Route element={<ScreenContainer />}>
         <Route index element={<Dashboard />} />
-        <Route path="dashboard" element={<Dashboard />} />
         <Route path="sensors" element={<Sensors />} />
       </Route>
     </Routes>
